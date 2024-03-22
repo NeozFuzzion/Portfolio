@@ -113,12 +113,16 @@ img{
 
 .project_lang{
     display: flex;
+
 }
 
 .project_lang_part{
+    background: white;
+    color: black;
     border: solid 1px ;
-    border-radius: 5px;
+    border-radius: 50px;
     padding: 4px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -131,11 +135,12 @@ img{
 .skills_used{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .project_github{
     border: solid 1px ;
-    border-radius: 5px;
+    border-radius: 50px;
     padding: 4px;
 }
 /* Style for the modal */
@@ -176,4 +181,16 @@ img{
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+.project_github,a {
+    display: flex;
+    text-decoration: unset;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.pgit{
+    margin-left: 5px;
 }
