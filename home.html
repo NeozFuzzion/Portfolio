@@ -16,19 +16,17 @@
     </ul>
 </div>
     <div id="topDiv">
-        <p>Axel LANTA</p>
+        <h2 class="title">Axel LANTA</h2>
     </div>
     <div class="partition" id="nom_profil">
-        <section>
-            <h1 style="color: white;">Axel LANTA</h1>
+            <h1 class="title" id="nom">Axel LANTA</h1>
             <p>Étudiant en dernière année d'ingénierie en Cloud Computing, passionné par la programmation. Mon parcours académique et mon intérêt pour le codage reflètent ma volonté de maîtriser les technologies émergentes dans le domaine informatique.</p>
             <a href="data/cv.pdf" download class="download-button">Download Resume</a>
 
-        </section>
     </div>
-<div class="line-div"></div>
+    <div class="line-div"></div>
     <div id="skills" class="partition">
-        <h3>Compétences</h3>
+        <h1>Compétences</h1>
         <div class="mosaic">
             <div class="item"><img src="data/img/docker.png" alt="Image 1"></div>
             <div class="item"><img src="data/img/gcp.png" alt="Image 2"></div>
@@ -43,14 +41,14 @@
     </div>
     <div class="line-div"></div>
     <div id="project" class="partition">
-        <h3>Projets</h3>
+        <h1>Projets</h1>
         <div class="container">
             <section>
                 <article>
                     <img class="img_project" src="./data/img/Screenshot from 2024-01-19 16-14-19.png" alt="Image 2" onclick="viewImage(this.src)">
                     <div class="project">
-                        <div class="project_title">
-                            Emulateur GameBoy
+                        <div class="project_title title">
+                            <h2 class="title">Emulateur GameBoy</h2>
                         </div>
                         <div class="project_description">
                             Ce projet à ete realisé en 1 mois j'etais seul. le plus dur à été de commencer le projet c'est la premiere fois que l'on parlé d'emulation.
@@ -86,8 +84,8 @@
                     <img class="img_project" src="./data/img/Screenshot from 2024-01-19 14-57-28.png" alt="Image 1" onclick="viewImage(this.src)">
 
                     <div class="project">
-                        <div class="project_title">
-                            JEE Summoners War
+                        <div class="project_title title">
+                            <h2 class="title">JEE Summoners War</h2>
                         </div>
                         <div class="project_description">
                             Réalisé avec 2 amis pour un projet scolaire nous avons decouvert avec ce projet comment focntionner JEE et GitHub.
@@ -121,8 +119,14 @@
                 </article>
             </section>
         </div>
-    </div>
+        </div>
+    <div class="line-div"></div>
+    <div class="partition" id="contact">
+        <h1>Contact</h1>
+        <p>Veuillez me contacter par mon adresse e-mail lantaaxel@gmail.com ou via LinkedIn.</p>
+        <a href="lien_vers_votre_profil_linkedin" class="linkedin-button">LinkedIn</a>
 
+    </div>
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -155,7 +159,7 @@
             });
         }, { threshold: 0 });
 
-        var nomProfil = document.getElementById("nom_profil");
+        var nomProfil = document.getElementById("nom");
         nomProfilObserver.observe(nomProfil);
 
 
