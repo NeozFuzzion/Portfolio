@@ -319,7 +319,7 @@ article div p {
     background-color: #005f91; /* Couleur de survol */
 }
 
-#zoomedImage {
+.zoomedImage {
     display: none;
     position: fixed;
     top: 50%;

@@ -29,7 +29,7 @@
         <div class="container">
             <section>
                 <article>
-                    <img class="img_project" src="./data/img/Screenshot from 2024-01-19 16-14-19.png" alt="Image 2" onclick="viewImage(this.src)">
+                    <img class="img_project" src="./data/img/Screenshot from 2024-01-19 16-14-19.png" alt="Image 2" class="originalImage">
                     <div class="project">
                         <div class="project_title title">
                             <h2 class="title">Emulateur GameBoy</h2>
@@ -65,7 +65,7 @@
         <div class="container">
             <section>
                 <article>
-                    <img class="img_project" src="./data/img/Screenshot from 2024-01-19 14-57-28.png" alt="Image 1"  id="originalImage">
+                    <img class="img_project" src="./data/img/Screenshot from 2024-01-19 14-57-28.png" alt="Image 1" class="originalImage">
 
                     <div class="project">
                         <div class="project_title title">
@@ -129,28 +129,12 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
-    <div id="zoomedImage">
-        <img src="your-image.jpg" alt="Zoomed Image" id="zoomedImg">
+    <div id="zoomedImage" class="zoomedImage">
+        <img src="" alt="Zoomed Image" id="zoomedImg">
       </div>
-
     <script>
-        // Function to display the clicked image in a modal
-        function viewImage(src) {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("modalImage");
-
-            var topDiv = document.getElementById("topDiv");
-            topDiv.style.display = "block";
-            modal.style.display = "block";
-            modalImg.src = src;
-        }
-
-        // Function to close the modal
-        function closeModal() {
-            var modal = document.getElementById("myModal");
-
-            modal.style.display = "none";
-        }
+        
+        
         // Observer l'élément nom_profil
         var nomProfilObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
@@ -206,34 +190,8 @@
                 });
             });
         });
+    
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const originalImage = document.getElementById('originalImage');
-            const zoomedImage = document.getElementById('zoomedImage');
-            const zoomedImg = document.getElementById('zoomedImg');
-          
-            // Function to zoom in on image
-            function zoomIn() {
-              zoomedImage.style.display = 'block';
-            }
-          
-            // Function to zoom out from image
-            function zoomOut() {
-              zoomedImage.style.display = 'none';
-            }
-          
-            // Click event on original image to zoom in
-            originalImage.addEventListener('click', function() {
-              zoomIn();
-            });
-          
-            // Click event outside zoomed image to zoom out
-            document.addEventListener('click', function(event) {
-              if (event.target !== zoomedImg && event.target !== originalImage) {
-                zoomOut();
-              }
-            });
-          });
     </script>
 </body>
 
