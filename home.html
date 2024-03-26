@@ -21,23 +21,7 @@
     <div class="partition" id="nom_profil">
             <h1 class="title" id="nom">Axel LANTA</h1>
             <p>Étudiant en dernière année d'ingénierie en Cloud Computing, passionné par la programmation. Mon parcours académique et mon intérêt pour le codage reflètent ma volonté de maîtriser les technologies émergentes dans le domaine informatique.</p>
-            <a href="data/cv.pdf" download class="download-button">Download Resume</a>
-
-    </div>
-    <div class="line-div"></div>
-    <div id="skills" class="partition">
-        <h1>Compétences</h1>
-        <div class="mosaic">
-            <div class="item"><img src="data/img/docker.png" alt="Image 1"></div>
-            <div class="item"><img src="data/img/gcp.png" alt="Image 2"></div>
-            <div class="item"><img src="data/img/nodejs.png" alt="Image 3"></div>
-            <div class="item"><img src="data/img/python.jpeg" alt="Image 3"></div>
-            <div class="item"><img src="data/img/java.png" alt="Image 3"></div>
-            <div class="item"><img src="data/img/mongodb.png" alt="Image 3"></div>
-            <div class="item"><img src="data/img/mysql.png" alt="Image 3"></div>
-            <div class="item"><img src="data/img/rust.jpg" alt="Image 3"></div>
-            <div class="item"><img src="data/img/spring.png" alt="Image 3"></div>
-        </div>
+            <a href="data/cv.pdf" download class="download-button">Mon CV</a>
     </div>
     <div class="line-div"></div>
     <div id="project" class="partition">
@@ -81,7 +65,7 @@
         <div class="container">
             <section>
                 <article>
-                    <img class="img_project" src="./data/img/Screenshot from 2024-01-19 14-57-28.png" alt="Image 1" onclick="viewImage(this.src)">
+                    <img class="img_project" src="./data/img/Screenshot from 2024-01-19 14-57-28.png" alt="Image 1"  id="originalImage">
 
                     <div class="project">
                         <div class="project_title title">
@@ -113,30 +97,50 @@
                                 </a>
                             </div>
                         </div>
-
-
                     </div>
                 </article>
             </section>
         </div>
-        </div>
+    </div>
     <div class="line-div"></div>
+    <div id="skills" class="partition">
+        <h1>Compétences</h1>
+        <div class="mosaic">
+            <div class="item"><img src="data/img/docker.png" alt="Image 1"></div>
+            <div class="item"><img src="data/img/gcp.png" alt="Image 2"></div>
+            <div class="item"><img src="data/img/nodejs.png" alt="Image 3"></div>
+            <div class="item"><img src="data/img/python.jpeg" alt="Image 3"></div>
+            <div class="item"><img src="data/img/java.png" alt="Image 3"></div>
+            <div class="item"><img src="data/img/mongodb.png" alt="Image 3"></div>
+            <div class="item"><img src="data/img/mysql.png" alt="Image 3"></div>
+            <div class="item"><img src="data/img/rust.jpg" alt="Image 3"></div>
+            <div class="item"><img src="data/img/spring.png" alt="Image 3"></div>
+        </div>
+    </div>
+    <div class="line-div"></div>
+    
     <div class="partition" id="contact">
         <h1>Contact</h1>
         <p>Veuillez me contacter par mon adresse e-mail lantaaxel@gmail.com ou via LinkedIn.</p>
-        <a href="lien_vers_votre_profil_linkedin" class="linkedin-button">LinkedIn</a>
+        <a href="lien_vers_votre_profil_linkedin" class="linkedin-button" style="float: right;margin-bottom:20px;">LinkedIn</a>
 
     </div>
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
+    <div id="zoomedImage">
+        <img src="your-image.jpg" alt="Zoomed Image" id="zoomedImg">
+      </div>
 
     <script>
         // Function to display the clicked image in a modal
         function viewImage(src) {
             var modal = document.getElementById("myModal");
             var modalImg = document.getElementById("modalImage");
+
+            var topDiv = document.getElementById("topDiv");
+            topDiv.style.display = "block";
             modal.style.display = "block";
             modalImg.src = src;
         }
@@ -144,6 +148,7 @@
         // Function to close the modal
         function closeModal() {
             var modal = document.getElementById("myModal");
+
             modal.style.display = "none";
         }
         // Observer l'élément nom_profil
@@ -202,7 +207,33 @@
             });
         });
 
-
+        document.addEventListener('DOMContentLoaded', function() {
+            const originalImage = document.getElementById('originalImage');
+            const zoomedImage = document.getElementById('zoomedImage');
+            const zoomedImg = document.getElementById('zoomedImg');
+          
+            // Function to zoom in on image
+            function zoomIn() {
+              zoomedImage.style.display = 'block';
+            }
+          
+            // Function to zoom out from image
+            function zoomOut() {
+              zoomedImage.style.display = 'none';
+            }
+          
+            // Click event on original image to zoom in
+            originalImage.addEventListener('click', function() {
+              zoomIn();
+            });
+          
+            // Click event outside zoomed image to zoom out
+            document.addEventListener('click', function(event) {
+              if (event.target !== zoomedImg && event.target !== originalImage) {
+                zoomOut();
+              }
+            });
+          });
     </script>
 </body>
 
