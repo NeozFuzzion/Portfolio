@@ -22,8 +22,8 @@
     </div>
     <div class="partition" id="nom_profil">
             <h1 class="title" id="nom">Axel LANTA</h1>
-            <p>Étudiant en dernière année d'ingénierie en Cloud Computing, passionné par la programmation. Mon parcours académique et mon intérêt pour le codage reflètent ma volonté de maîtriser les technologies émergentes dans le domaine informatique.</p>
-            <a href="data/cv.pdf" download class="download-button">Mon CV</a>
+            <p>Étudiant en dernière année d'ingénierie en Cloud Computing, <span class="soft-skill">passionné</span> par la programmation. Mon parcours académique et mon intérêt pour le codage reflètent ma <span class="soft-skill">curiosité</span> et ma <span class="soft-skill">volonté de d'apprendre</span> les technologies émergentes dans le domaine informatique.</p>
+            
     </div>
     
     <div id="project" class="partition">
@@ -125,7 +125,8 @@
         <h1>Contact</h1>
         <p>Veuillez me contacter par mon adresse e-mail <span class="email">lantaaxel@gmail.com</span> ou via LinkedIn.</p>
         <a href="https://www.linkedin.com/in/lantaaxel/" class="linkedin-button" style="float: right;margin-bottom:20px;">LinkedIn</a>
-
+        <a href="https://github.com/NeozFuzzion" class="github-button" style="float: right;margin-bottom:20px;">GitHub</a>
+        <a href="data/cv.pdf" download class="download-button" style="float: right;margin-bottom:20px;">Mon CV</a>
     </div>
     <script>
         
@@ -192,7 +193,7 @@
                     e.preventDefault();
 
                     const target = document.querySelector(this.getAttribute('href'));
-                    const offset = 70;
+                    const offset = 80;
                     const scrollPosition = target.offsetTop - offset;
 
                     window.scrollTo({

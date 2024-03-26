@@ -331,7 +331,42 @@ article div p {
     background-color: #005f91; /* Couleur de survol */
 }
 
+.github-button{
+    display: inline-block;
+    background-color: #000000; /* Couleur bleue LinkedIn */
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+    padding: 10px 20px; /* Rembourrage intérieur du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur de la souris */
+    transition: background-color 0.3s ease; /* Transition en douceur */
+}
 
+.github-button:hover {
+    box-shadow: 1px 1px 0px 0px #ffffff;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #00ff55; /* Couleur bleue LinkedIn */
+    color: #000000; /* Couleur du texte */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+    padding: 10px 20px; /* Rembourrage intérieur du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur de la souris */
+    transition: background-color 0.3s ease; /* Transition en douceur */
+}
+
+.download-button:hover {
+    color: #fff; /* Couleur du texte */
+    background-color: #00a136; /* Couleur de survol */
+}
 
 :root {
 color-scheme: only light;
@@ -361,4 +396,12 @@ color-scheme: only light;
     .menu {
         padding: 10px 10px 8px 10px;
     }
+}
+
+.email{
+    color: #6bc4f2;
+}
+
+.soft-skill{
+    color: #54d6ff;
 }
