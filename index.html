@@ -122,7 +122,7 @@
     
     <div class="partition" id="contact">
         <h1>Contact</h1>
-        <p>Veuillez me contacter par mon adresse e-mail lantaaxel@gmail.com ou via LinkedIn.</p>
+        <p>Veuillez me contacter par mon adresse e-mail <span class="email">lantaaxel@gmail.com</span> ou via LinkedIn.</p>
         <a href="https://www.linkedin.com/in/lantaaxel/" class="linkedin-button" style="float: right;margin-bottom:20px;">LinkedIn</a>
 
     </div>
@@ -177,8 +177,10 @@
             document.addEventListener('click', (event) => {
                 if (event.target !== burgerMenu && event.target!== bm1  && event.target!== bm2 && !menuItems.contains(event.target)) {
                     menuItems.style.display = 'none';
-                    burgerMenu.style.display = 'flex';
-                }
+                    menu.style.height = "5%";
+                    menu.style.width = "5%";
+                    burgerMenu.style.flexDirection = "column";
+                } 
             });
 
 
