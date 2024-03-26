@@ -1,337 +1,339 @@
+:root {
+    --primary-blue: #ffffff; /* Main blue color */
+    --piss-yellow: #ecebad;  /* Light gray background */
+    --dark-gray: #3b3a40;   /* Dark gray text or elements */
+
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#2b2b2b;
+    color:white;
+}
+h1,h2,h3,.title{
+    color:var(--piss-yellow)
+}
+.container {
+
+    box-shadow: 0 0 10px var(--primary-blue);
+    margin: 20px 10% 20px 10%;
+    overflow: hidden;
+}
+
+.container:hover {
+    background-color: var(--dark-gray);
+    color: white;
+}
 
 
-@media (prefers-color-scheme: dark) or (prefers-color-scheme: light){
-    :root {
-        --primary-blue: #ffffff; /* Main blue color */
-        --piss-yellow: #ecebad;  /* Light gray background */
-        --dark-gray: #3b3a40;   /* Dark gray text or elements */
-    
+header {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+section {
+    padding: 20px;
+}
+
+article:nth-child(even) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+article:nth-child(odd) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+article div p {
+    margin: 5%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.img_lang{
+    height: 75px;
+}
+
+.project_lang_part img{
+    border-radius: 20px;
+}
+
+
+/* Telephone */
+@media (max-width: 1000px) {
+    .img_project {
+        width: 100%; 
       }
-    
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color:#2b2b2b;
-        color:white;
-    }
-    h1,h2,h3,.title{
-        color:var(--piss-yellow)
-    }
-    .container {
-    
-        box-shadow: 0 0 10px var(--primary-blue);
-        margin: 20px 10% 20px 10%;
-        overflow: hidden;
-    }
-    
-    .container:hover {
-        background-color: var(--dark-gray);
-        color: white;
-    }
-    
-    
-    header {
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    section {
-        padding: 20px;
+    article {
+        flex-direction: column;
+      }
+}
+/* Ordinateur/Tablette */
+@media (min-width: 1000px) {
+    .img_project {
+        max-width: 40%; 
+        min-width: 300px;
+        max-height: 400px;
     }
     
     article:nth-child(even) {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        flex-direction: row;
     }
-    
     
     article:nth-child(odd) {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        flex-direction: row-reverse;
     }
     
-    article div p {
-        margin: 5%;
-        font-size: 20px;
-        text-align: justify;
-    }
-    
-    .img_lang{
-        height: 75px;
-    }
-    
-    .project_lang_part img{
-        border-radius: 20px;
-    }
-    
-    
-    /* Telephone */
-    @media (max-width: 1000px) {
-        .img_project {
-            width: 100%; 
-          }
-        article {
-            flex-direction: column;
-          }
-    }
-    /* Ordinateur/Tablette */
-    @media (min-width: 1000px) {
-        .img_project {
-            max-width: 40%; 
-            min-width: 300px;
-            max-height: 400px;
-        }
-        
-        article:nth-child(even) {
-            flex-direction: row;
-        }
-        
-        article:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-        
-    }
-    
-    
-    .project{
-        display: flex;
-        align-content: center;
-        flex-direction: column;
-        justify-content: space-around;
-        max-width: 700px;
-        min-height: 375px;
-    }
-    
-    
-    .project_title{
-        font-size: x-large;
-        color: ghostwhite;
-        margin-bottom: 10px;
-    }
-    
-    .project_description{
-        padding-right: 10px;
-    }
-    
-    .project_lang{
-        display: flex;
-        margin: 3px 0px 3px 0px;
-    }
-    
-    .project_lang_part{
-        background: white;
-        color: black;
-        border: solid 1px ;
-        border-radius: 50px;
-        padding: 4px;
-        margin-right: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    
-    .project_lang_name{
-        padding: 4px;
-    }
-    
-    .skills_used{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    
-    .project_github{
-        border: solid 1px ;
-        border-radius: 50px;
-        padding: 4px;
-    }
-    /* Style for the modal */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    }
-    
-    /* Style for the modal content (the image) */
-    .modal-content {
-        margin: auto;
-        position: fixed; /* Stay in place */
-        top: 100px;
-        left: 50%; /* Set left to 50% */
-        transform: translateX(-50%);
-        max-width: 80%;
-        max-height: 80%;
-    }
-    
-    /* Close button */
-    .close {
-        position: absolute;
-        top: 80px;
-        right: 35px;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-    
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .project_github,a {
-        display: flex;
-        text-decoration: unset;
-        color: white;
-        margin-right: 10px;
-        align-items: center;
-    }
-    
-    .pgit{
-        margin-left: 5px;
-    }
-    
-    #topDiv {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #2a3940;
-        text-align: center;
-        z-index: 999;
-        display: none; /* Pour cacher la div initialement */
-    }
-    
-    
-    .mosaic {
-        display: flex;
-        grid-gap: 50px;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-    }
-    
-    .item {
-        max-width: 120px;
-        max-height: 120px;
-        padding: 10px;
-        background: white;
-        display: flex;
-        align-items: center;
-    }
-    
-    .item img {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    .menu {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        background-color: #333;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    
-    .menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: none;
-    }
-    
-    .menu ul li {
-        margin-bottom: 10px;
-    }
-    
-    .menu ul li a {
-        text-decoration: none;
-        color: white;
-        display: block;
-        margin-top: 10px;
-    }
-    
-    .menu ul li a:hover {
-        color: #ffd700; /* Change color on hover as needed */
-    }
-    
-    .burger-menu {
-        cursor: pointer;
-    }
-    
-    
-    #nom_profil{
-        margin: 40px 10% 20px 10%;
-    }
-    
-    .partition{
-        margin: 20px 5% 20px 5%;
-    }
-    
-    .line-div {
-        width: 200px;
-        height: 1px; /* Adjust the height of the line */
-        position: relative;
-        left: 50%; /* Set left to 50% */
-        transform: translateX(-50%);
-    }
-    
-    .line-div::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 1px; /* Adjust the thickness of the line */
-        background-color: white; /* Adjust the color of the line */
-    }
-    
-    .linkedin-button {
-        display: inline-block;
-        background-color: #0077B5; /* Couleur bleue LinkedIn */
-        color: #fff; /* Couleur du texte */
-        text-decoration: none; /* Supprimer le soulignement du lien */
-        padding: 10px 20px; /* Rembourrage intérieur du bouton */
-        border-radius: 5px; /* Coins arrondis */
-        font-size: 16px; /* Taille de la police */
-        font-weight: bold; /* Gras */
-        border: none; /* Pas de bordure */
-        cursor: pointer; /* Curseur de la souris */
-        transition: background-color 0.3s ease; /* Transition en douceur */
-    }
-    
-    .linkedin-button:hover {
-        background-color: #005f91; /* Couleur de survol */
-    }
-    
-    .zoomedImage {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-    }
-    
-    :root {
-    color-scheme: only light;
-    }
 }
+
+
+.project{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 700px;
+    min-height: 375px;
+}
+
+
+.project_title{
+    font-size: x-large;
+    color: ghostwhite;
+    margin-bottom: 10px;
+}
+
+.project_description{
+    padding-right: 10px;
+}
+
+.project_lang{
+    display: flex;
+    margin: 3px 0px 3px 0px;
+}
+
+.project_lang_part{
+    background: white;
+    color: black;
+    border: solid 1px ;
+    border-radius: 50px;
+    padding: 4px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project_lang_name{
+    padding: 4px;
+}
+
+.skills_used{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project_github{
+    border: solid 1px ;
+    border-radius: 50px;
+    padding: 4px;
+}
+/* Style for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Style for the modal content (the image) */
+.modal-content {
+    margin: auto;
+    position: fixed; /* Stay in place */
+    top: 100px;
+    left: 50%; /* Set left to 50% */
+    transform: translateX(-50%);
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 80px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.project_github,a {
+    display: flex;
+    text-decoration: unset;
+    color: white;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.pgit{
+    margin-left: 5px;
+}
+
+#topDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2a3940;
+    text-align: center;
+    z-index: 999;
+    display: none; /* Pour cacher la div initialement */
+}
+
+
+.mosaic {
+    display: flex;
+    grid-gap: 50px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 20px 10% 20px 10%;
+}
+
+.item {
+    max-width: 120px;
+    max-height: 120px;
+    padding: 10px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu {
+    box-shadow: 0 0 10px var(--primary-blue);
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    padding: 10px;
+    width: 5%;
+    border-radius: 5px;
+    height: 5%;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+.menu ul li a:hover {
+    color: #ffd700; /* Change color on hover as needed */
+}
+
+.burger-menu {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.burger-menu p{
+    margin: 0;
+}
+
+#nom_profil{
+    margin: 40px 10% 20px 10%;
+}
+
+.partition{
+    margin: 20px 5% 100px 5%;
+}
+
+.line-div {
+    width: 200px;
+    height: 1px; /* Adjust the height of the line */
+    position: relative;
+    left: 50%; /* Set left to 50% */
+    transform: translateX(-50%);
+}
+
+.line-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px; /* Adjust the thickness of the line */
+    background-color: white; /* Adjust the color of the line */
+}
+
+.linkedin-button {
+    display: inline-block;
+    background-color: #0077B5; /* Couleur bleue LinkedIn */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+    padding: 10px 20px; /* Rembourrage intérieur du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur de la souris */
+    transition: background-color 0.3s ease; /* Transition en douceur */
+}
+
+.linkedin-button:hover {
+    background-color: #005f91; /* Couleur de survol */
+}
+
+
+
+:root {
+color-scheme: only light;
+}
+
