@@ -2,11 +2,11 @@
     --primary-blue: #ffffff; /* Main blue color */
     --piss-yellow: #ecebad;  /* Light gray background */
     --dark-gray: #3b3a40;   /* Dark gray text or elements */
-    font-size: 120%;
-  }
+    font-size: 105%;
+    font-family: 'Montserrat';
+}
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color:#2b2b2b;
@@ -218,7 +218,7 @@ article div p {
 
 .mosaic {
     display: flex;
-    grid-gap: 50px;
+    grid-gap: 20px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
