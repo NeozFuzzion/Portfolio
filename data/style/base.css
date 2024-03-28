@@ -121,6 +121,7 @@ article div p {
 .project_lang{
     display: flex;
     margin: 3px 0px 3px 0px;
+    flex-wrap: wrap;
 }
 
 .project_lang_part{
@@ -404,4 +405,63 @@ color-scheme: only light;
 
 .soft-skill{
     color: #54d6ff;
+}
+
+.experience_container {
+    margin: 20px 10% 20px 10%;
+    display: flex;
+    grid-gap: 10px;    
+    flex-wrap: wrap;
+}
+
+.ecole, .experience_ecole {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ecole{
+    justify-content: center;
+    border-right: 5px solid blue;
+    border-radius: 30px;
+    padding-right: 10px;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.experience_ecole{
+    grid-gap: 10px;
+}
+
+#stage2, #mobilite, #stage1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Assurez-vous que ces éléments occupent toute la hauteur de leur parent */
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+#stage2{
+    border-left: 5px solid rgb(59, 138, 240);
+}
+
+#mobilite{
+    border-left: 5px solid rgb(255, 0, 0);
+}
+
+#stage1{
+    border-left: 5px solid rgb(30, 255, 0);
+}
+
+.periode_experience{
+    font-size: medium;
+    margin-top: 0px;
+}
+
+.nom_experience{
+    color: #6bc4f2;
+    font-size: larger;
 }
